@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeStay | Luxury Hotel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <button type="button" class="menu-toggle" aria-label="Open navigation">
+            <span class="menu-icon">☰</span>
+        </button>
+
+        <a href="#" class="logo">LuxeStay</a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#booking" class="nav-button">Book Now</a>
+    </nav>
+</header>
+
+<main id="home">
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">WELCOME TO LUXESTAY</p>
+
+            <h1>Stay Somewhere <span>Exceptional.</span></h1>
+
+            <p>
+                Experience comfort, elegance, and unforgettable hospitality
+                in the heart of the city.
+            </p>
+
+            <a href="#rooms" class="hero-button">Explore Rooms</a>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+
+        <div class="booking-heading">
+            <p class="eyebrow">PLAN YOUR STAY</p>
+            <h2>Find Your Perfect Stay</h2>
+        </div>
+
+        <form id="booking-form">
+
+            <div class="form-group">
+                <label for="check-in">Check-in</label>
+                <input type="date" id="check-in" name="check-in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="check-out">Check-out</label>
+                <input type="date" id="check-out" name="check-out" required disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select room</option>
+                    <option value="85000">Deluxe Room</option>
+                    <option value="150000">Executive Suite</option>
+                    <option value="300000">Presidential Suite</option>
+                </select>
+                <p id="room-price"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Guests</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
+                </select>
+            </div>
+
+            <button type="submit" class="booking-button">
+                Check Availability
+            </button>
+
+        </form>
+        <div id="booking-result" class="booking-result"></div>
+
+    </section>
+
+    <section id="rooms" class="rooms reveal">
+        <h2>Our Rooms</h2>
+        <p>Choose the perfect space for your stay.</p>
+
+        <div class="room-container">
+
+            <article class="room-card reveal">
+                <div class="room-image"></div>
+
+                <div class="room-info">
+                    <h3>Deluxe Room</h3>
+                    <p>Comfortable and elegant, perfect for a relaxing stay.</p>
+                    <strong>₦85,000 / night</strong>
+                    <button type="button" class="room-book-button" data-room="85000">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+            <article class="room-card reveal">
+                <div class="room-image"></div>
+
+                <div class="room-info">
+                    <h3>Executive Suite</h3>
+                    <p>More space, more comfort, and a premium experience.</p>
+                    <strong>₦150,000 / night</strong>
+                    <button type="button" class="room-book-button" data-room="150000">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+            <article class="room-card reveal">
+                <div class="room-image"></div>
+
+                <div class="room-info">
+                    <h3>Presidential Suite</h3>
+                    <p>Luxury at its finest with everything you could need.</p>
+                    <strong>₦300,000 / night</strong>
+                    <button type="button" class="room-book-button" data-room="300000">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="amenities" class="amenities reveal">
+
+        <div class="amenities-heading">
+            <p class="eyebrow">EXPERIENCE LUXESTAY</p>
+            <h2>Everything You Need</h2>
+            <p>
+                Enjoy thoughtful amenities designed to make your stay
+                comfortable and memorable.
+            </p>
+        </div>
+
+        <div class="amenities-container">
+
+            <article class="amenity-card pool reveal">
+                <div class="amenity-overlay">
+                    <h3>Swimming Pool</h3>
+                    <p>Relax and unwind by our outdoor pool.</p>
+                </div>
+            </article>
+
+            <article class="amenity-card dining reveal">
+                <div class="amenity-overlay">
+                    <h3>Fine Dining</h3>
+                    <p>Enjoy carefully prepared meals from our chefs.</p>
+                </div>
+            </article>
+
+            <article class="amenity-card gym reveal">
+                <div class="amenity-overlay">
+                    <h3>Fitness Center</h3>
+                    <p>Stay active with our fully equipped gym.</p>
+                </div>
+            </article>
+
+            <article class="amenity-card lounge reveal">
+                <div class="amenity-overlay">
+                    <h3>Luxury Lounge</h3>
+                    <p>Relax, work, or enjoy a quiet moment.</p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="gallery" class="gallery reveal">
+
+        <div class="gallery-heading">
+            <p class="eyebrow">A GLIMPSE OF LUXESTAY</p>
+            <h2>See The Experience</h2>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item gallery-large reveal">
+                <img
+                        src="assets/images/luxury-hotel-interior-image.avif"
+                        alt="Luxury hotel interior"
+                >
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                        src="assets/images/elegant-hotel-room-image.avif"
+                        alt="Elegant hotel room"
+                >
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                        src="assets/images/luxury-hotel-lobby-image.avif"
+                        alt="Luxury hotel lobby"
+                >
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                        src="assets/images/hotel-swimming-pool-image.avif"
+                        alt="Hotel swimming pool"
+                >
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                        src="assets/images/luxury-hotel-spa-image.avif"
+                        alt="Luxury hotel spa"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="how-it-works" class="how-it-works reveal">
+
+        <div class="how-it-works-heading">
+            <p class="eyebrow">A SIMPLE EXPERIENCE</p>
+            <h2>How It Works</h2>
+            <p>
+                From choosing your room to confirming your stay,
+                we've made the process simple and seamless.
+            </p>
+        </div>
+
+        <div class="steps-container">
+
+            <article class="step-card reveal">
+                <span class="step-number">01</span>
+                <h3>Choose Your Room</h3>
+                <p>
+                    Explore our rooms and find the space that
+                    suits your stay.
+                </p>
+            </article>
+
+            <article class="step-card reveal">
+                <span class="step-number">02</span>
+                <h3>Plan Your Stay</h3>
+                <p>
+                    Select your dates, room type, and number
+                    of guests.
+                </p>
+            </article>
+
+            <article class="step-card reveal">
+                <span class="step-number">03</span>
+                <h3>Confirm Your Booking</h3>
+                <p>
+                    Review your stay details and confirm
+                    your reservation.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="faq" class="faq reveal">
+
+        <div class="faq-heading">
+            <p class="eyebrow">NEED TO KNOW</p>
+            <h2>Frequently Asked Questions</h2>
+            <p>
+                Find answers to some of the most common questions
+                about your stay at LuxeStay.
+            </p>
+        </div>
+
+        <div class="faq-container">
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>What time is check-in and check-out?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Check-in begins at 2:00 PM and check-out is
+                        at 11:00 AM.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>Can I cancel or modify my booking?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. Booking changes or cancellations can be
+                        requested before your scheduled check-in date.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>Do you accommodate families?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. LuxeStay offers comfortable accommodation
+                        suitable for families and groups.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>Are meals included with the room?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Meals are not included in the standard room
+                        rate, but guests can enjoy dining options
+                        available at LuxeStay.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>Is parking available?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. Complimentary parking is available
+                        for hotel guests.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq-item reveal">
+                <button type="button" class="faq-question">
+                    <span>How can I contact LuxeStay?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        You can reach our team through the Contact Us
+                        button or by using the contact details in the footer.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="reviews reveal">
+
+        <div class="reviews-heading">
+            <p class="eyebrow">GUEST EXPERIENCES</p>
+            <h2>What Our Guests Say</h2>
+        </div>
+
+        <div class="reviews-container">
+
+            <article class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Everything about my stay was excellent. The room was
+                    beautiful, the staff were welcoming, and the food was amazing."
+                </p>
+                <h3>Amaka O.</h3>
+                <span>Business Traveler</span>
+            </article>
+
+            <article class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "LuxeStay exceeded my expectations. The atmosphere was
+                    peaceful and the service was exceptional."
+                </p>
+                <h3>Daniel K.</h3>
+                <span>Weekend Guest</span>
+            </article>
+
+            <article class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Beautiful rooms, great location, and genuinely helpful
+                    staff. I would definitely stay here again."
+                </p>
+                <h3>Chiamaka N.</h3>
+                <span>Family Traveler</span>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact reveal">
+
+        <div class="contact-content">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Ready For Your Stay?</h2>
+            <p>
+                Have questions or need help planning your visit?
+                Our team is always happy to help.
+            </p>
+
+            <a href="mailto:hello@luxestay.com" class="contact-button">
+                Contact Us
+            </a>
+        </div>
+
+    </section>
+
+
+
+</main>
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <a href="#" class="logo">LuxeStay</a>
+            <p>
+                Comfort, elegance, and exceptional hospitality
+                in one unforgettable stay.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Contact</h3>
+            <a href="mailto:hello@luxestay.com">hello@luxestay.com</a>
+            <a href="tel:+2348000000000">+234 800 000 0000</a>
+            <span>Awka, Nigeria</span>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 LuxeStay. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<button type="button" id="back-to-top" aria-label="Back to top">
+    ↑
+</button>
+
+</body>
+</html>
